@@ -819,7 +819,7 @@ input[type=color]::-webkit-color-swatch-wrapper {
                         border: 1px solid rgba(223, 223, 223, 0.75);
                         box-shadow: 0px 0px 8px rgba(180, 180, 180, 0.25);
                         border-radius: 8px;'>
-                        <p id='parasix'style='color: black !important; cursor: pointer;margin-left:15px;font-size:11px;letter-spacing: 0.5px;font-family: "Inter";text-transform: uppercase;'> Emphasis Tiles </p>
+                        <p id='parasix'style='color: black !important; cursor: pointer;margin-left:15px;font-size:11px;letter-spacing: 0.5px;font-family: "Inter";text-transform: uppercase;'> Emphasis Titles </p>
                         <label class="switch" >
                         <input type="checkbox";>
                         <span class="slider round" ></span>
