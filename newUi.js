@@ -1,4 +1,4 @@
-"use strict";
+ "use strict";
 
 let showWidget = false;
 let keyboardNavigation = false;
@@ -193,7 +193,7 @@ input[type=submit]:hover {
 
   .dropbtn {
     background-color: #FFFFFF;
-    color:#424141;;
+    color:#424141;
     padding: 16px;
     font-size: 16px;
     border: none;
@@ -204,6 +204,7 @@ input[type=submit]:hover {
     text-align:left;
     margin-left:20px;
     outline:none;
+    font-weight:500;
   }
   
   
@@ -222,7 +223,7 @@ input[type=submit]:hover {
     box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
     z-index: 1;
     width:388px;
-    height:437px;
+    height:420px;
     margin-left:20px;
     border-radius:8px;
   }
@@ -243,6 +244,7 @@ input[type=submit]:hover {
     margin-left:20px;
     outline:none;
     margin-top:10px;
+    font-weight: 500;
   }
   
   
@@ -283,6 +285,7 @@ input[type=submit]:hover {
     margin-left:20px;
     outline:none;
     margin-top:10px;
+    font-weight: 500;
   }
   
   .dropdownthree {
@@ -305,6 +308,19 @@ input[type=submit]:hover {
   }
   
   .show {display: block;}
+
+  input[type=color]::-webkit-color-swatch {
+  border: none;
+  border-radius: 50%;
+  padding: 0;
+}
+
+
+input[type=color]::-webkit-color-swatch-wrapper {
+    border: none;
+    border-radius: 50%;
+    padding: 0;
+}
 
    
   .mymodel-bg
@@ -346,14 +362,10 @@ input[type=submit]:hover {
                 cursor: pointer;
             }
 
-            .contentslidecontainer {
-                width:70%;
-                margin:0px;
-              }
               
               .contentslider {
                 -webkit-appearance: none;
-                width: 100%;
+                width: 70%;
                 height: 10px;
                 border-radius: 5px;
                 background: #d3d3d3;
@@ -361,7 +373,6 @@ input[type=submit]:hover {
                 opacity: 0.7;
                 -webkit-transition: .2s;
                 transition: opacity .2s;
-                margin:0px;
               }
               
               .contentslider:hover {
@@ -383,15 +394,14 @@ input[type=submit]:hover {
                 background-color: #FFFFFF; 
                 border: none;
                 color: black;
-                padding:10px;
-                display: inline-block;
-                margin:4px 2px;
-                width:10px;
-                height:10px;
+                width:25px;
+                height:25px;
                 border-radius:50%;
                 cursor: pointer;
                 background:url('minus.png');
                 background-repeat: no-repeat;
+                outline:none;
+                display: inline-block;
               }
 
               .contentbuttontwo {
@@ -399,14 +409,14 @@ input[type=submit]:hover {
                 border: none;
                 color: black;
                 padding:10px;
-                display: inline-block;
-                margin:4px 2px;
-                width:10px;
-                height:10px;
+                width:27px;
+                height:27px;
                 border-radius:50%;
                 cursor: pointer;
                 background:url('plus.png');
                 background-repeat: no-repeat;
+                outline:none;
+                display: inline-block;
               }
 
     </style>
@@ -755,7 +765,7 @@ input[type=submit]:hover {
                         
                         <p id = 'para -4' style='color:white;font-family:"Inter";margin-left:20px;margin-top:165px;font-weight:600px; font-size:16px;line-height:16px;'>You can select any of the configurations depending upon the necessity and disability.</p> 
                         <div class="dropdown">
-                        <button onclick="myFunction()" class="dropbtn">Content Adjustment</button>
+                        <button onclick="myFunction()" class="dropbtn">Content Adjustment<span><img src="spin.png" style="margin-left:160px;";><img src="downwardarrow.png" style="margin-left:20px; display:inline;"></span></button>
                         <div id="myDropdown" class="dropdown-content">
                           
                         <p id="contentpara" style="font-family: Inter;
@@ -764,20 +774,16 @@ input[type=submit]:hover {
                         font-size: 14px;
                         line-height: 16px;
                         margin-left:10px;
-                        color: #8F91AC;"> All the adjustments of textual elements of webpage can be done from here</p>
-                        <p id="anothercontent" style="font-family: Inter;
-                        font-style: normal;
-                        font-weight: bold;
-                        font-size: 12px;
-                        margin-left:10px;
-                        letter-spacing: 0.5px;
+                        margin-bottom:0px;
+                        color: #8F91AC;"> All the adjustments of textual elements of webpage can be done from here<br><br><span style="color:#4B4B4B!important; margin-top:20px;font-size:16px;letter-spacing: 0.5px;
                         text-transform: uppercase;
-                        color: #4B4B4B";>FONT ADJUSTMENT<p>
+                        font-weight: bold;"> Font Adjustment</span></p>
                         
-                        <div class="contentslidecontainer" style='margin-left:40px;'>
-                        <p id = "value " style='margin-top:1px; font-size:12px;font-family: Inter;color: #4B4B4B;'>+<span id="demo"></span>%<span id="demo"></span></p>
-                        <input type="range" min="0" max="100" value="0" class="contentslider" id="myRange">
-                        </div>
+                        <p id ="one" style="font-size:12px;margin-top:5px;margin-left:150px; margin-bottom:0px;color: #4B4B4B;">+<span id="demo"></span>%</p>
+                        <img src='minus.png' style='margin-left:30px;cursor:pointer;'>
+                        <input type="range" min="0" max="100" value="0" class="contentslider" style="margin-left:5px; margin-top:0px;" id="myRange">
+                        <img src="plus.png" style='cursor:pointer;'>
+                        
                         <script>
                             var slider = document.getElementById("myRange");
                             var output = document.getElementById("demo");
@@ -791,7 +797,7 @@ input[type=submit]:hover {
                         width: 105px;
                         height: 75px;
                         left:20px;
-                        top:150px;
+                        top:130px;
                         background:#FFFFFF;
                         border: 1px solid rgba(223, 223, 223, 0.75);
                         box-shadow: 0px 0px 8px rgba(180, 180, 180, 0.25);
@@ -808,7 +814,7 @@ input[type=submit]:hover {
                         width: 105px;
                         height: 75px;
                         left:140px;
-                        top:150px;
+                        top:130px;
                         background:#FFFFFF;
                         border: 1px solid rgba(223, 223, 223, 0.75);
                         box-shadow: 0px 0px 8px rgba(180, 180, 180, 0.25);
@@ -825,7 +831,7 @@ input[type=submit]:hover {
                         width: 105px;
                         height: 75px;
                         left:260px;
-                        top:150px;
+                        top:130px;
                         background:#FFFFFF;
                         border: 1px solid rgba(223, 223, 223, 0.75);
                         box-shadow: 0px 0px 8px rgba(180, 180, 180, 0.25);
@@ -842,7 +848,7 @@ input[type=submit]:hover {
                         width: 105px;
                         height: 75px;
                         left:20px;
-                        top:240px;
+                        top:220px;
                         background:#FFFFFF;
                         border: 1px solid rgba(223, 223, 223, 0.75);
                         box-shadow: 0px 0px 8px rgba(180, 180, 180, 0.25);
@@ -857,7 +863,7 @@ input[type=submit]:hover {
                         width: 105px;
                         height: 75px;
                         left:140px;
-                        top:240px;
+                        top:220px;
                         background:#FFFFFF;
                         border: 1px solid rgba(223, 223, 223, 0.75);
                         box-shadow: 0px 0px 8px rgba(180, 180, 180, 0.25);
@@ -871,7 +877,7 @@ input[type=submit]:hover {
                         width: 105px;
                         height: 75px;
                         left:260px;
-                        top:240px;
+                        top:220px;
                         background:#FFFFFF;
                         border: 1px solid rgba(223, 223, 223, 0.75);
                         box-shadow: 0px 0px 8px rgba(180, 180, 180, 0.25);
@@ -885,14 +891,14 @@ input[type=submit]:hover {
                         width: 105px;
                         height: 75px;
                         left:20px;
-                        top:340px;
+                        top:310px;
                         background:#FFFFFF;
                         border: 1px solid rgba(223, 223, 223, 0.75);
                         box-shadow: 0px 0px 8px rgba(180, 180, 180, 0.25);
                         border-radius: 8px;'>
-                        <p id='paraseven'style='color: black !important; cursor: pointer;margin-left:9px;font-size:11px;letter-spacing: 0.5px;font-family: "Inter";text-transform: uppercase;'> Adjust Word Spacing </p>
-                        <button class="contentbutton"></button>
-                        <button class ="contentbuttontwo" style="margin-left:50px;"></button>
+                        <p id='paraseven'style='color: black !important; cursor: pointer;font-size:11px;letter-spacing: 0.5px; text-align:center;font-family: "Inter";text-transform: uppercase;margin-bottom:0px;margin-top:10px;'> Adjust Word Spacing </p>
+                        <button class="contentbutton" style="margin-top:10px; margin-left:4px;"><span style='margin-left:25px; margin-bottom:10px;font-size:14px;margin-right:10px;'>+1%</span></button>
+                        <button class ="contentbuttontwo" style="margin-left:40px;"></button>
                         </div>
 
                         <div id='contentbuttoneight' 
@@ -900,14 +906,14 @@ input[type=submit]:hover {
                         width: 105px;
                         height: 75px;
                         left:140px;
-                        top:340px;
+                        top:310px;
                         background:#FFFFFF;
                         border: 1px solid rgba(223, 223, 223, 0.75);
                         box-shadow: 0px 0px 8px rgba(180, 180, 180, 0.25);
                         border-radius: 8px;'>
-                        <p id='paraseven'style='color: black !important; cursor: pointer;margin-left:9px;font-size:11px;letter-spacing: 0.5px;font-family: "Inter";text-transform: uppercase;'> Adjust Letter Spacing </p>
-                        <button class="contentbutton"></button>
-                        <button class ="contentbuttontwo" style="margin-left:50px;"></button>
+                        <p id='paraseven'style='color: black !important; cursor: pointer;font-size:11px;letter-spacing: 0.5px; text-align:center;font-family: "Inter";text-transform: uppercase;margin-bottom:0px;margin-top:10px;'> Adjust Letter Spacing </p>
+                        <button class="contentbutton" style="margin-top:10px; margin-left:4px;"><span style='margin-left:25px; margin-bottom:10px;font-size:14px;margin-right:10px;'>+2%</span></button>
+                        <button class ="contentbuttontwo" style="margin-left:40px;"></button>
                         </div>
 
                         <div id='contentbuttonnine' 
@@ -915,14 +921,14 @@ input[type=submit]:hover {
                         width: 105px;
                         height: 75px;
                         left:260px;
-                        top:340px;
+                        top:310px;
                         background:#FFFFFF;
                         border: 1px solid rgba(223, 223, 223, 0.75);
                         box-shadow: 0px 0px 8px rgba(180, 180, 180, 0.25);
                         border-radius: 8px;'>
-                        <p id='paraseven'style='color: black !important; cursor: pointer;margin-left:9px;font-size:11px;letter-spacing: 0.5px;font-family: "Inter";text-transform: uppercase;'> Adjust Height Spacing </p>
-                        <button class="contentbutton"></button>
-                        <button class ="contentbuttontwo" style="margin-left:50px;"></button>
+                        <p id='paraseven'style='color: black !important; cursor: pointer;font-size:11px;letter-spacing: 0.5px; text-align:center;font-family: "Inter";text-transform: uppercase;margin-bottom:0px;margin-top:10px;'> Adjust Line Height </p>
+                        <button class="contentbutton" style="margin-top:10px; margin-left:4px;"><span style='margin-left:30px; margin-bottom:10px;font-size:14px;margin-right:10px;'>12</span></button>
+                        <button class ="contentbuttontwo" style="margin-left:40px;"></button>
                         </div>
 
                             </div>
@@ -947,14 +953,14 @@ input[type=submit]:hover {
                       </script>
 
                       <div class="dropdowntwo">
-                        <button onclick="myFunction2()" class="dropbtntwo">Style Adjustment</button>
+                        <button onclick="myFunction2()" class="dropbtntwo">Style Adjustment<span><img src="spin.png" style="margin-left:180px;";><img src="downwardarrow.png" style="margin-left:20px; display:inline;"></span></button>
                         <div id="mytwoDropdown" class="dropdowntwo-content">
                         <div id='option-1' 
                             style='position: absolute;
                             width: 105px;
                             height: 58px;
-                            left: 25px;
-                            top: 50px;
+                            left: 20px;
+                            top: 40px;
                             background:#FFFFFF;
                             box-shadow: 0px 0px 8px rgba(180, 180, 180, 0.25);
                             border-radius: 8px;'>
@@ -975,7 +981,7 @@ input[type=submit]:hover {
                             width: 105px;
                             height: 58px;
                             left: 145px;
-                            top: 50px;
+                            top: 40px;
                             background:#FFFFFF;
                             box-shadow: 0px 0px 8px rgba(180, 180, 180, 0.25);
                             border-radius: 8px;'>
@@ -995,8 +1001,8 @@ input[type=submit]:hover {
                             style='position: absolute;
                             width: 105px;
                             height: 58px;
-                            left: 260px;
-                            top: 50px;
+                            left: 265px;
+                            top: 40px;
                             background:#FFFFFF;
                             box-shadow: 0px 0px 8px rgba(180, 180, 180, 0.25);
                             border-radius: 8px;'>
@@ -1016,7 +1022,7 @@ input[type=submit]:hover {
                             style='position: absolute;
                             width: 105px;
                             height: 58px;
-                            left: 25px;
+                            left: 20px;
                             top: 120px;
                             background:#FFFFFF;
                             box-shadow: 0px 0px 8px rgba(180, 180, 180, 0.25);
@@ -1058,7 +1064,7 @@ input[type=submit]:hover {
                             style='position: absolute;
                             width: 105px;
                             height: 58px;
-                            left: 260px;
+                            left: 265px;
                             top: 120px;
                             background:#FFFFFF;
                             box-shadow: 0px 0px 8px rgba(180, 180, 180, 0.25);
@@ -1087,14 +1093,14 @@ input[type=submit]:hover {
                             
                             color: #4B4B4B;margin-top:200px;margin-left:30px;">Text Title Colors</p>
 
-                            <input type="color" id="favcolor" name="favcolor" value="#ff0000" style="margin-left:30px;border-radius:50%;width:20px;";>
-                            <input type="color" id="favcolor" name="favcolor" value="#FAFF10" style="outline:none;margin-left:10px;border-radius:50%;width:20px;";>
-                            <input type="color" id="favcolor" name="favcolor" value="#3624FF" style="outline:none;margin-left:10px;border-radius:50%;width:20px;";>
-                            <input type="color" id="favcolor" name="favcolor" value="#0DFF34" style="outline:none;margin-left:10px;border-radius:50%;width:20px;";>
-                            <input type="color" id="favcolor" name="favcolor" value="#FF24F6" style="outline:none;margin-left:10px;border-radius:50%;width:20px;";>
-                            <input type="color" id="favcolor" name="favcolor" value="#FFB800" style="outline:none;margin-left:10px;border-radius:50%;width:20px;";>
-                            <input type="color" id="favcolor" name="favcolor" value="#000000" style="outline:none;margin-left:10px;border-radius:50%;width:20px;";>
-                            <input type="color" id="favcolor" name="favcolor" value="#4A2972" style="outline:none;margin-left:10px;border-radius:50%;width:20px;";>
+                            <input type="color" id="favcolor" name="favcolor" value="#ff0000" style="margin-left:30px;border:none;border-radius:50%;width:25px;";>
+                            <input type="color" id="favcolor" name="favcolor" value="#FAFF10" style="outline:none;margin-left:10px;border:none;border-radius:50%;width:25px;";>
+                            <input type="color" id="favcolor" name="favcolor" value="#3624FF" style="outline:none;margin-left:10px;border:none;border-radius:50%;width:25px;";>
+                            <input type="color" id="favcolor" name="favcolor" value="#0DFF34" style="outline:none;margin-left:10px;border:none;border-radius:50%;width:25px;";>
+                            <input type="color" id="favcolor" name="favcolor" value="#FF24F6" style="outline:none;margin-left:10px;border:none;border-radius:50%;width:25px;";>
+                            <input type="color" id="favcolor" name="favcolor" value="#FFB800" style="outline:none;margin-left:10px;border:none;border-radius:50%;width:25px;";>
+                            <input type="color" id="favcolor" name="favcolor" value="#000000" style="outline:none;margin-left:10px;border:none;border-radius:50%;width:25px;";>
+                            <input type="color" id="favcolor" name="favcolor" value="#4A2972" style="outline:none;border:none;margin-left:10px;border-radius:50%;width:25px;";>
                             </div>
                             </div>
                             <script>
@@ -1117,7 +1123,7 @@ input[type=submit]:hover {
                       </script>
 
                       <div class="dropdownthree">
-                        <button onclick="myFunction3()" class="dropbtnthree">Navigation Adjustments</button>
+                        <button onclick="myFunction3()" class="dropbtnthree">Navigation Adjustments<span><img src="spin.png" style="margin-left:133px;";><img src="downwardarrow.png" style="margin-left:20px; display:inline;"></span></button>
                         <div id="mythreeDropdown" class="dropdownthree-content">
 
                         <div id='contentbuttonone' 
